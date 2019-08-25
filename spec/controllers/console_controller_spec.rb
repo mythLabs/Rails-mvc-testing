@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ConsoleController, :type => :controller do
+RSpec.describe Api::ConsoleController, :type => :controller do
 
     before do
         create(:console, name: "NES", manufacturer: "Nitendo")

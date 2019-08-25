@@ -1,4 +1,4 @@
-class ConsoleController < ApplicationController
+class Api::ConsoleController < ApplicationController
 
     before_action :initialize_consoles, only: [:index, :find]
 
