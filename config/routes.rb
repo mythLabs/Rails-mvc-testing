@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get '/consoles' => 'console#index'
 
   get '/console/:manufacturer' => 'console#find'
+
+  get '/home' => 'home#index'
+
+  get '/about' => 'about#index'
 end
