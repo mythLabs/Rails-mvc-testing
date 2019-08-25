@@ -5,24 +5,18 @@ class ConsoleController < ApplicationController
     def index
        
 
-        render(json: {'consoles' => @consoles.map{|console| console[:name]}})
+        render(json: {'consoles' => @consoles.map(&:name)})
     end
 
     def find
 
-        render(json: {'consoles' => @consoles.select{|console| console[:manufacturer] == params[:manufacturer]}.map{|console| console[:name]}})
+        render(json: {'consoles' => @consoles.where('manufacturer = ?', params[:manufacturer]).map(&:name) } )
 
     end
 
     private
 
     def initialize_consoles
-        @consoles ||= 
-        [
-            {name: 'NES', manufacturer: "Nitendo"},
-            {name: 'Wii', manufacturer: "Nitendo"},
-            {name: 'Xbox', manufacturer: "Microsoft"},
-            {name: 'Playstation', manufacturer: "Sony"},
-        ]
+       @consoles = Console.all
     end
 end
