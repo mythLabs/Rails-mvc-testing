@@ -2,4 +2,4 @@
 
 ## Using RSpec, Capybara, FactoryBot
 
-### testing cotnroller, model ,Api endpoint, Feature testing with capybara
+### testing controller, model ,Api endpoint, Feature testing with capybara
