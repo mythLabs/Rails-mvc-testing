@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/home' => 'home#index'
   get '/about' => 'about#index'
   get '/consoles' => 'consoles#index'
+  resources(:consoles)
 
   namespace :api do
     get '/status' => 'status#index'
