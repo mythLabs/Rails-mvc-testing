@@ -4,6 +4,7 @@ class ConsolesController < ApplicationController
     end
 
     def new
+        @console=Console.new
     end
 
     def create
